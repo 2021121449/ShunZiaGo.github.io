@@ -43,7 +43,7 @@
                     <div role="tab"  class="van-tab" onclick="click1()"><span
                             class="van-tab__text van-tab__text--ellipsis" >核验二维码</span></div>
                     <div class="van-tabs__line" id="clazz"
-                         style="width: 80px; transform: translateX(90px) translateX(-50%);"></div>
+                         style="width: 80px; transform: translateX(100px) translateX(-50%);"></div>
                 </div>
             </div>
             <div class="van-tabs__content" >
@@ -298,7 +298,7 @@
                                         </div>
                                         <div class="now-time-tip mt-20 bg-primary font-white px-15 font-16 font-bold"
                                              style="height: 8.53333vw !important; border-radius: 4.26667vw !important; padding-top: 0px !important;">
-                                            当前时间:2022-09-20 09:24:11
+                                            <span id="clock"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -408,7 +408,7 @@
         vat1.classList.remove("van-tab--active")
         vat2.classList.add("van-tab--active");
         document.getElementById('s5').style.display = 'none';
-        document.getElementById('clazz').style.cssText = 'width: 80px; transform: translateX(270px) translateX(-50%); transition-duration: 0.3s;';
+        document.getElementById('clazz').style.cssText = 'width: 80px; transform: translateX(290px) translateX(-50%); transition-duration: 0.3s;';
         document.getElementById('s4').style.display = '';
     }
 
@@ -418,7 +418,7 @@
         let vat2 = document.getElementsByClassName('van-tab')[1];
         vat2.classList.remove("van-tab--active")
         vat1.classList.add("van-tab--active");
-        document.getElementById('clazz').style.cssText = 'width: 80px; transform: translateX(90px) translateX(-50%); transition-duration: 0.3s;';
+        document.getElementById('clazz').style.cssText = 'width: 80px; transform: translateX(100px) translateX(-50%); transition-duration: 0.3s;';
         document.getElementById('s4').style.display = 'none';
         document.getElementById('s5').style.display = '';
     }
@@ -459,11 +459,37 @@
         result = month + "-" + day + " " + "16" + ":" + "14";
         document.getElementById("time4").innerHTML = result;
     }
+
+    function gettime() {
+        var ntm = Date.now();//获取当前时间戳（毫秒）
+        var time = new Date(ntm);//毫秒转日期格式
+    
+        //使用函数的方式进行定义
+        function dateFormat(fmt, date) {
+            var o = {
+                "M+": date.getMonth() + 1,
+                "d+": date.getDate(),
+                "h+": date.getHours(),
+                "m+": date.getMinutes(),
+                "s+": date.getSeconds(),
+            };
+            if (/(y+)/.test(fmt)) {
+                fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+            }
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt))
+                    fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+    
+        var showtime = "当前时间:" + dateFormat("yyyy-MM-dd hh:mm:ss", time);
+        document.getElementById('clock').innerHTML = showtime;
+    }
     
     show1();
     show2();
     show3();
     show4();
-
+    setInterval("gettime()", 1000);
 
 </script>
