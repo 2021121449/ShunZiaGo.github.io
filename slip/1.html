@@ -4,29 +4,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-    <link rel="icon" href="/wec-counselor-leave-apps/leave/favicon.ico">
+    <link rel="icon" href="./favicon.ico">
     <title>请假详情</title>
     <link href="/css/page-home.2d389ded.css" rel="prefetch">
     
-    <link href="/js/page-home.33754602.js" rel="prefetch">
+   <!-- <link href="/js/page-home.33754602.js" rel="prefetch"> -->
     
-    <link href="/css/chunk-common.209299d0.css" rel="preload" as="style">
-    <link href="/css/chunk-vendors.8c468b3e.css" rel="preload" as="style">
-    <link href="/css/home.d6d81581.css" rel="preload" as="style">
-    
+    <link href="../css/chunk-common.209299d0.css" rel="preload" as="style">
+    <link href="../css/chunk-vendors.8c468b3e.css" rel="preload" as="style">
+    <link href="../css/home.d6d81581.css" rel="preload" as="style">
+    <!-- 
     <link href="/js/chunk-common.56aad48a.js" rel="preload" as="script">
-    <link href="/js/chunk-vendors.9faeaa69.js" rel="preload" as="script">
-    <link href="/js/home.a80e0419.js" rel="preload" as="script">
+    <link href="/js/chunk-vendors.9faeaa69.js" rel="preload" as="script"> -->
+    <!-- <link href="/js/home.a80e0419.js" rel="preload" as="script"> -->
     
-    <link href="/css/chunk-vendors.8c468b3e.css" rel="stylesheet">
-    <link href="/css/chunk-common.209299d0.css" rel="stylesheet">
-    <link href="/css/home.d6d81581.css" rel="stylesheet">
+    <link href="../css/chunk-vendors.8c468b3e.css" rel="stylesheet">
+    <link href="../css/chunk-common.209299d0.css" rel="stylesheet">
+    <link href="../css/home.d6d81581.css" rel="stylesheet">
     
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1921143_afl404vl6g.css">
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="/css/page-home.2d389ded.css">
-    <script charset="utf-8" src="/js/page-home.33754602.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/page-home.2d389ded.css">
+    <!-- <script charset="utf-8" src="/js/page-home.33754602.js"></script> -->
 
 </head>
 <body class="">
@@ -324,9 +324,9 @@
 </script>
 <script type="text/javascript"
         src="https://api.map.baidu.com/getscript?v=3.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20220829195059">
-</script>
+</script><!-- 
 <script src="/js/chunk-vendors.9faeaa69.js"></script>
-<script src="/js/chunk-common.56aad48a.js"></script>
+<script src="/js/chunk-common.56aad48a.js"></script> -->
 <!--		<script src="/js/home.a80e0419.js"></script>-->
 <div class="van-toast van-toast--middle van-toast--loading" style="z-index: 2004; display: none;">
     <div class="van-loading van-loading--spinner van-toast__loading"><span
@@ -380,39 +380,11 @@
         document.getElementById("time4").innerHTML = result;
     }
     
-    
-    function gettime() {
-        var ntm = Date.now();//获取当前时间戳（毫秒）
-        var time = new Date(ntm);//毫秒转日期格式
-        
-        //使用函数的方式进行定义
-        function dateFormat(fmt, date) {
-            var o = {
-                "M+": date.getMonth() + 1,
-                "d+": date.getDate(),
-                "h+": date.getHours(),
-                "m+": date.getMinutes(),
-                "s+": date.getSeconds(),
-            };
-            if (/(y+)/.test(fmt)) {
-                fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
-            }
-            for (var k in o)
-                if (new RegExp("(" + k + ")").test(fmt))
-                    fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-            return fmt;
-        }
-        
-        var showtime = "当前时间:" + dateFormat("yyyy-MM-dd hh:mm:ss", time);
-        document.getElementById('clock').innerHTML = showtime;
-    }
-    
     show1();
     show2();
     show3();
     show4();
-    gettime();
-    setInterval("gettime()", 1000);
+  
 
 
 </script>
