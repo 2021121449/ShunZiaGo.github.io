@@ -434,8 +434,7 @@
     month = month < 10 ? "0" + month : month;
     let day = date.getDate();//获取日期
     day = day < 10 ? "0" + day : day;
-    let hour = date.getHours();
-    hour = hour < 10 ? "0" + hour : hour;
+
     let minute = date.getMinutes();
     minute = minute < 10 ? "0" + minute : minute;
     
@@ -445,13 +444,16 @@
     }
     
     var show2 = function () {
+        let hour = date.getHours();
         hour = hour + 4;
+        hour = hour < 10 ? "0" + hour : hour;
         result = month + "-" + day + " " + hour + ":" + "00";
         document.getElementById("time2").innerHTML = result;
     }
     
     var show3 = function () {
         day = day - 1;
+        day = day < 10 ? "0" + day : day;
         result = month + "-" + day + " " + "15" + ":" + "32";
         document.getElementById("time3").innerHTML = result;
     }
