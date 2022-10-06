@@ -106,7 +106,8 @@
 												<div class="font-dark font-14 mb-10"> 我的 请假申请 </div>
                                                 <!---->
 												<div class="flex mb-5 font-12 ai-center relative">
-													<div class="totalDays pin-t pin-r absolute font-14 bold px-10 py-5 font-primary radius-small" id="out_time">
+													<div class="totalDays pin-t pin-r absolute font-14 bold px-10 py-5 font-primary radius-small"
+                                                         id="out_time">
 														 </div>
 													<div class="font-light no-shrink row-label"> 开始时间： </div>
 													<div class="font-normal flex-1 ml-5 bold" id="time1">  </div>
@@ -388,7 +389,7 @@
     <!---->
     <!---->
 
-
+</div>
 </body>
 </html>
 
@@ -467,9 +468,9 @@
         let hour = date.getHours();
         let time;
         if (hour <= 19) {
-            time =4;
+            time = 4;
         } else {
-            time =1;
+            time = 1;
         }
         result = time + '小时';
         document.getElementById("out_time").innerHTML = result;
