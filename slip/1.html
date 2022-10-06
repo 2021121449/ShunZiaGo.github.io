@@ -7,26 +7,26 @@
     <link rel="icon" href="./favicon.ico">
     <title>请假详情</title>
     <link href="/css/page-home.2d389ded.css" rel="prefetch">
-    
+
     <!-- <link href="/js/page-home.33754602.js" rel="prefetch"> -->
-    
+
     <link href="../css/chunk-common.209299d0.css" rel="preload" as="style">
     <link href="../css/chunk-vendors.8c468b3e.css" rel="preload" as="style">
     <link href="../css/home.d6d81581.css" rel="preload" as="style">
-    
+
     <link href="../js/chunk-common.56aad48a.js" rel="preload" as="script">
     <link href="../js/chunk-vendors.9faeaa69.js" rel="preload" as="script">
-   <link href="../js/home.a80e0419.js" rel="preload" as="script">
-    
+    <link href="../js/home.a80e0419.js" rel="preload" as="script">
+
     <link href="../css/chunk-vendors.8c468b3e.css" rel="stylesheet">
     <link href="../css/chunk-common.209299d0.css" rel="stylesheet">
     <link href="../css/home.d6d81581.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1921143_afl404vl6g.css">
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="../css/page-home.2d389ded.css">
-     <script charset="utf-8" src="../js/jquery.min.js"></script>
+    <script charset="utf-8" src="../js/jquery.min.js"></script>
 
 </head>
 <body class="">
@@ -38,17 +38,18 @@
         <div class="flex-1 van-tabs van-tabs--line">
             <div class="van-tabs__wrap van-hairline--top-bottom">
                 <div role="tablist" class="van-tabs__nav van-tabs__nav--line">
-                    <div role="tab" aria-selected="true" class="van-tab van-tab--active" id="a1" onclick="click2()"><span
+                    <div role="tab" aria-selected="true" class="van-tab van-tab--active" id="a1"
+                         onclick="click2()"><span
                             class="van-tab__text van-tab__text--ellipsis ">请假信息</span></div>
-                    <div role="tab"  class="van-tab" onclick="click1()"><span
-                            class="van-tab__text van-tab__text--ellipsis" >核验二维码</span></div>
+                    <div role="tab" class="van-tab" onclick="click1()"><span
+                            class="van-tab__text van-tab__text--ellipsis">核验二维码</span></div>
                     <div class="van-tabs__line" id="clazz"
                          style="width: 80px; transform: translateX(100px) translateX(-50%);"></div>
                 </div>
             </div>
-            <div class="van-tabs__content" >
+            <div class="van-tabs__content">
                 <div role="tabpanel" class="van-tab__pane" style="" id="s5">
-                    <div class="flex-col h-screen flex-1 overflow-hidden" >
+                    <div class="flex-col h-screen flex-1 overflow-hidden">
                         <div class="flex-1  overflow-y-auto"><span>
 										<div class="cat-tip flex-center font-white font-12 bg-warning"><i
                                                 class="tip-icon cat-icon iconfont iconquestion"
@@ -105,9 +106,8 @@
 												<div class="font-dark font-14 mb-10"> 我的 请假申请 </div>
                                                 <!---->
 												<div class="flex mb-5 font-12 ai-center relative">
-													<div
-                                                            class="totalDays pin-t pin-r absolute font-14 bold px-10 py-5 font-primary radius-small">
-														4小时 </div>
+													<div class="totalDays pin-t pin-r absolute font-14 bold px-10 py-5 font-primary radius-small" id="out_time">
+														 </div>
 													<div class="font-light no-shrink row-label"> 开始时间： </div>
 													<div class="font-normal flex-1 ml-5 bold" id="time1">  </div>
 												</div>
@@ -186,7 +186,7 @@
                                                                     style="font-size: 5.33333vw; top: -0.53333vw;"></i><span
                                                                     class="ml-20 mr-5" style="margin-left: 8vw;">一级：王琳 -
 																	审批<span
-                                                                        style="color:#00ca75;">通过</span>(逾期处理)</span>
+                                                                        style="color:#00ca75;">通过</span></span>
 															</div>
 															<div class="font-light ai-center no-shrink"
                                                                  style="margin-top: 0.53333vw;"><span id="time4"></span>
@@ -198,7 +198,7 @@
 																<div data-v-7622a762=""
                                                                      class="cat-approve-opinion font-light font-12 relative close"
                                                                      style="-webkit-box-orient: vertical;">
-																	审批意见：无
+																	审批意见：同意！
                                                                     <!---->
                                                                     <!---->
                                                                     <!---->
@@ -215,7 +215,7 @@
                                 <!---->
                                 <!---->
                             </div>
-                            
+
                         </div>
                         <span class="no-shrink">
 									<div class="btn-area flex jc-between no-shrink">
@@ -291,7 +291,8 @@
                                                         text="61c3bea7fb0c490db7fac8324cbd1bf7&amp;1"
                                                         src="image/img.png" width="160"
                                                         style="display: inline-block;"></div>
-                                                <div class="font-12 text-light mt-10 text-normal" style="white-space: nowrap;">
+                                                <div class="font-12 text-light mt-10 text-normal"
+                                                     style="white-space: nowrap;">
                                                     请使用辅导猫扫码核验请假单真伪
                                                 </div>
                                             </div>
@@ -302,18 +303,16 @@
                                         </div>
                                     </div>
                                 </div>
-               
+
                             </div>
                         </div><!----></div>
                 </div>
             </div>
-    
-           
-            
+
+
         </div>
-        
-        
-        
+
+
         <div class="cat-personal-modal flex-center flex-1 h-screen w-screen h-screen absolute pin-l pin-t" id="s2"
              style="display: none;">
             <div class="personal-info-box px-15 py-15 radius-normal overflow-hidden">
@@ -356,42 +355,38 @@
                             <div class="content-row-value flex-1"> 21软件技术1</div>
                         </div>
                         <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
-                            <div class="content-row-label mr-5 no-shrink"> • 宿舍： </div>
-                            <div class="content-row-value flex-1"> - </div>
+                            <div class="content-row-label mr-5 no-shrink"> • 宿舍：</div>
+                            <div class="content-row-value flex-1"> -</div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-        
     </div>
-</div>
-<script src="https://gosspublic.alicdn.com/aliyun-oss-sdk-5.0.1.min.js"></script>
-<script src="https://feres.cpdaily.com/bower_components/baidumap/baidujsSdk@2.js"></script>
-<script type="text/javascript"
-        src="https://api.map.baidu.com/getscript?v=2.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20200327103013">
-</script>
-<script src="https://feres.cpdaily.com/bower_components/areaData/area.js"></script>
-<script
-        src="https://api.map.baidu.com/api?v=3.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20180112120004&amp;s=1">
-</script>
-<script type="text/javascript"
-        src="https://api.map.baidu.com/getscript?v=3.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20220829195059">
-</script>
-<script src="../js/chunk-vendors.9faeaa69.js"></script>
-<script src="../js/chunk-common.56aad48a.js"></script>
+    <script src="https://gosspublic.alicdn.com/aliyun-oss-sdk-5.0.1.min.js"></script>
+    <script src="https://feres.cpdaily.com/bower_components/baidumap/baidujsSdk@2.js"></script>
+    <script type="text/javascript"
+            src="https://api.map.baidu.com/getscript?v=2.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20200327103013">
+    </script>
+    <script src="https://feres.cpdaily.com/bower_components/areaData/area.js"></script>
+    <script
+            src="https://api.map.baidu.com/api?v=3.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20180112120004&amp;s=1">
+    </script>
+    <script type="text/javascript"
+            src="https://api.map.baidu.com/getscript?v=3.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20220829195059">
+    </script>
+    <script src="../js/chunk-vendors.9faeaa69.js"></script>
+    <script src="../js/chunk-common.56aad48a.js"></script>
 
-<div class="van-toast van-toast--middle van-toast--loading" style="z-index: 2004; display: none;">
-    <div class="van-loading van-loading--spinner van-toast__loading"><span
-            class="van-loading__spinner van-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <div class="van-toast van-toast--middle van-toast--loading" style="z-index: 2004; display: none;">
+        <div class="van-loading van-loading--spinner van-toast__loading"><span
+                class="van-loading__spinner van-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+        <div class="van-toast__text">加载中...</div>
     </div>
-    <div class="van-toast__text">加载中...</div>
-</div>
-<!---->
-<!---->
-
-
-
+    <!---->
+    <!---->
 
 
 </body>
@@ -401,6 +396,7 @@
     function open1() {
         document.getElementById('s2').style.display = '';
     }
+
     function click1() {
         console.log("=========")
         let vat1 = document.getElementsByClassName('van-tab')[0];
@@ -422,12 +418,12 @@
         document.getElementById('s4').style.display = 'none';
         document.getElementById('s5').style.display = '';
     }
-    
+
     function cancel() {
         document.getElementById('s2').style.display = 'none';
     }
-    
-    
+
+
     var date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
@@ -437,21 +433,25 @@
 
     let minute = date.getMinutes();
     minute = minute < 10 ? "0" + minute : minute;
-    
+
     var show1 = function () {
         let hour = date.getHours();
         result = month + "-" + day + " " + hour + ":" + "00";
         document.getElementById("time1").innerHTML = result;
     }
-    
+
     var show2 = function () {
         let hour = date.getHours();
-        hour = hour + 4;
+        if (hour <= 19) {
+            hour = hour + 4;
+        } else {
+            hour = hour + 1;
+        }
         hour = hour < 10 ? "0" + hour : hour;
         result = month + "-" + day + " " + hour + ":" + "00";
         document.getElementById("time2").innerHTML = result;
     }
-    
+
     var show3 = function () {
         day = day - 1;
         day = day < 10 ? "0" + day : day;
@@ -463,10 +463,22 @@
         document.getElementById("time4").innerHTML = result;
     }
 
+    var show5 = function () {
+        let hour = date.getHours();
+        let time;
+        if (hour <= 19) {
+            time =4;
+        } else {
+            time =1;
+        }
+        result = time + '小时';
+        document.getElementById("out_time").innerHTML = result;
+    }
+
     function gettime() {
         var ntm = Date.now();//获取当前时间戳（毫秒）
         var time = new Date(ntm);//毫秒转日期格式
-    
+
         //使用函数的方式进行定义
         function dateFormat(fmt, date) {
             var o = {
@@ -484,15 +496,16 @@
                     fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
             return fmt;
         }
-    
+
         var showtime = "当前时间:" + dateFormat("yyyy-MM-dd hh:mm:ss", time);
         document.getElementById('clock').innerHTML = showtime;
     }
-    
+
     show1();
     show2();
     show3();
     show4();
+    show5();
     setInterval("gettime()", 1000);
 
 </script>
